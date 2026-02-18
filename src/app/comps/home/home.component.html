@@ -1,0 +1,27 @@
+<section id="home">
+  <div class="home-container">
+    <h1 [class.highlighted]="isHighlighted">Welcome to {{ courseCode }}!</h1>
+    <p class="welcome-msg">{{ welcomeMsg }}</p>
+    <img [src]="userImageUrl" alt="Course Image" class="avatar">
+
+    <p class="course-description">
+      Dive into {{ courseCode }} and explore new knowledge with hands-on lessons and engaging activities. 
+      This course is designed to guide you step by step, helping you master the concepts and enjoy the learning journey.
+    </p>
+
+    <div class="course-details">
+      <h2>Course Details</h2>
+      <ul>
+        <li><strong>Description:</strong> {{ description }}</li>
+        <li><strong>Units:</strong> {{ units }}</li>
+        <li><strong>Status:</strong> {{ isActive ? stat : 'Inactive' }}</li>
+      </ul>
+    </div>
+
+    <div *ngIf="isActive" class="active-badge">
+      ✅ This course is currently active!
+    </div>
+
+    <app-user-interaction></app-user-interaction>
+  </div>
+</section>

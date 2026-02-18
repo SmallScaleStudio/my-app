@@ -1,0 +1,19 @@
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  min-height: 80vh; 
+  padding: 20px;
+}
+
+.about-container {
+  background-color: #ffffff; 
+  border: 3px solid #064d00; 
+  border-radius: 20px;
+  padding: 30px 40px;
+  max-width: 600px; 
+  text-align: center;
+  color: #064d00; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
