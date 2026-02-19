@@ -1,0 +1,42 @@
+/* Navbar brand */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+  color: #e0e0e0;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+/* Active link highlight */
+.navbar-nav .nav-link.active {
+  color: #ffd700; /* gold */
+  font-weight: bold;
+}
+
+/* Hover effect for links */
+.navbar-nav .nav-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Search box styling */
+.form-control {
+  border-radius: 0.25rem;
+}
+
+/* Search button styling */
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+}

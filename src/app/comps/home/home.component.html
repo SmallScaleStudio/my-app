@@ -1,0 +1,77 @@
+<div class="home-container">
+  <!-- STRING INTERPOLATION -->
+  <h1>{{ title }}</h1>
+  <p>Score: {{ score }} / 100</p>
+  <p>Next yr: {{ currentYear + 1 }}</p>
+  <p>Result: {{ getGrade() }}</p>
+  <p>{{ score > 90 ? "Excellent!" : "Keep trying" }}</p>
+
+  <hr>
+
+  <!-- PROPERTY BINDING -->
+  <button [disabled]="isDisabled">Submit</button>
+  <img [src]="imgSrc" [alt]="'Angular Logo'" [width]="80" />
+  <input type="number" [max]="inputMax" [placeholder]="'Enter score'" />
+
+  <hr>
+
+  <!-- EVENT BINDING -->
+  <button (click)="onClick()">Clicked {{ count }} times</button>
+  <input (keyup)="onKey($event)" placeholder="Press a key" />
+  <p>Last key: {{ lastKey }}</p>
+  <input (input)="onInput($event)" placeholder="Type something..." />
+  <p>You typed: {{ typedText }}</p>
+
+  <hr>
+
+  <!-- TWO-WAY BINDING -->
+  <input [(ngModel)]="studentName" placeholder="Enter your name" />
+  <p>Hello, {{ studentName }}!</p>
+
+  <input type="range" min="0" max="100" [(ngModel)]="studentScore" />
+  <p>Score: {{ studentScore }}</p>
+
+  <hr>
+
+  <!-- ATTRIBUTE BINDING -->
+  <table border="1">
+    <tr>
+      <td [attr.colspan]="span">Spans 2 columns</td>
+    </tr>
+  </table>
+  <button [attr.aria-label]="ariaDesc">Submit</button>
+  <div [attr.data-user-id]="userId">User card</div>
+  <td [attr.colspan]="isWide ? 2 : null">Conditional colspan</td>
+
+  <hr>
+
+  <!-- CLASS BINDING -->
+  <div class="box" [class.active]="isActive" [class.error]="hasError">
+    Status indicator
+  </div>
+  <button (click)="toggleActive()">Toggle Active</button>
+
+  <p [ngClass]="{
+    'text-small': size === 'small',
+    'text-medium': size === 'medium',
+    'text-large': size === 'large'
+  }">Resizable text</p>
+
+  <hr>
+
+  <!-- STYLE BINDING -->
+  <p class="styled-paragraph"
+     [style.color]="fontColor"
+     [style.background-color]="bgColor"
+     [style.fontSize.px]="fontSize">
+     Styled paragraph
+  </p>
+
+  <div class="ngstyle-box" [ngStyle]="{
+    'color': fontColor,
+    'font-size': fontSize + 'px',
+    'border': '2px solid ' + fontColor
+  }">
+    ngStyle demo
+  </div>
+</div>

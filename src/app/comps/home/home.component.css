@@ -1,0 +1,82 @@
+/* Home container styling */
+.home-container {
+  max-width: 800px;      /* limit width */
+  margin: 40px auto;     /* center horizontally and add top/bottom margin */
+  padding: 20px;         /* inner spacing */
+  border: 2px solid #2E75B6; /* blue border */
+  border-radius: 8px;    /* rounded corners */
+  background-color: #ffffff; /* white background */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+/* Existing styles inside home.component.css remain the same */
+:host {
+  display: block;
+  font-family: Arial, sans-serif;
+}
+
+/* Buttons */
+button {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #2E75B6;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1f4e7a;
+}
+
+/* Inputs */
+input[type="text"], input[type="number"], input[type="range"], input[type="search"] {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+}
+
+/* Box for class binding */
+.box {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+/* Active / error states */
+.active {
+  background-color: green;
+  color: white;
+}
+
+.error {
+  border: 2px solid red;
+}
+
+/* Resizable text */
+.text-small {
+  font-size: 12px;
+}
+.text-medium {
+  font-size: 16px;
+}
+.text-large {
+  font-size: 20px;
+}
+
+/* Styled paragraph using style binding */
+.styled-paragraph {
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+/* ngStyle demo box */
+.ngstyle-box {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+}

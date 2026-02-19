@@ -1,0 +1,50 @@
+<div class="calculator-container">
+  <h2>Grade Calculator</h2>
+
+  <p>Student: {{ studentName }}</p>
+  <p>Score: {{ score }}</p>
+  <p>Letter Grade: {{ getLetterGrade() }}</p>
+  <p>{{ passing ? "Status: PASS" : "Status: FAIL" }}</p>
+
+  <hr>
+
+  <button [disabled]="!passing">Submit Grade</button>
+  <input type="number" [max]="100" [value]="score" [placeholder]="'Enter score'" />
+
+  <hr>
+
+  <button (click)="onClick()">Clicked {{ clickCount }} times</button>
+  <input (keyup)="onKey($event)" placeholder="Press a key" />
+  <p>Last key pressed: {{ lastKey }}</p>
+  <input (input)="onInput($event)" placeholder="Type something" />
+  <p>You typed: {{ typedText }}</p>
+
+  <hr>
+
+  <label>Name: <input [(ngModel)]="studentName" /></label>
+  <p>Hello, {{ studentName }}!</p>
+  <label>Score: <input type="range" min="0" max="100" [(ngModel)]="score" /></label>
+  <p>Score: {{ score }} ({{ getLetterGrade() }})</p>
+
+  <hr>
+
+  <table border="1">
+    <tr>
+      <td [attr.colspan]="colSpan">Colspan example</td>
+    </tr>
+  </table>
+  <button [attr.aria-label]="'Submit grade for ' + studentName">Submit</button>
+
+  <hr>
+
+  <div class="box" [class.highlight]="isHighlighted" [class.pass]="passing">
+    Grade box
+  </div>
+  <button (click)="toggleHighlight()">Toggle Highlight</button>
+
+  <hr>
+
+  <p [style.color]="gradeColor" [style.fontWeight]="'bold'" [style.fontSize.px]="20">
+    Styled Grade: {{ getLetterGrade() }}
+  </p>
+</div>
