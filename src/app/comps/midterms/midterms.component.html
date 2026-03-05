@@ -1,0 +1,36 @@
+<section id="midterms">
+  <div class="midterms-container">
+
+    <nav class="mini-navbar">
+      <button (click)="activeTab='activities'" [class.active]="activeTab==='activities'">
+        Activities
+      </button>
+      <button (click)="activeTab='practice'" [class.active]="activeTab==='practice'">
+        Practice Activities
+      </button>
+    </nav>
+
+    <section *ngIf="activeTab === 'activities'" class="activities">
+      <app-products></app-products>
+    </section>
+
+
+
+    <section *ngIf="activeTab === 'practice'" class="practice-tab">
+
+
+      <div class="calculator-border">
+        <app-calculator></app-calculator>
+      </div>
+
+      <div class="data-binding-border">
+        <app-interpolation-data-binding></app-interpolation-data-binding>
+      </div>
+
+
+
+    </section>
+  </div>
+
+
+</section>

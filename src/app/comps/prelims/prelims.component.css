@@ -1,0 +1,56 @@
+
+.prelims-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 25px;
+
+  border: 3px solid #0b5d3b; 
+  border-radius: 10px;
+
+  background-color: #f4fff8;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.prelims-container h2 {
+  color: #0b5d3b;
+  border-bottom: 2px solid #0b5d3b;
+  padding-bottom: 5px;
+  margin-top: 25px;
+}
+
+.prelims-container p {
+  font-size: 15px;
+  margin: 6px 0;
+  color: #1b3b2f;
+}
+
+.prelims-container strong {
+  color: #064d2b;
+}
+
+.prelims-container ul {
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+.prelims-container li {
+  margin: 4px 0;
+  color: #1b3b2f;
+}
+
+.prelims-container li:hover {
+  color: #0b5d3b;
+  font-weight: bold;
+}
+
+.disclaimer {
+  margin-top: 25px;
+  padding-top: 10px;
+
+  font-size: 14px;
+  font-style: italic;
+  color: #2f5d46;
+
+  border-top: 1px dashed #0b5d3b;
+}

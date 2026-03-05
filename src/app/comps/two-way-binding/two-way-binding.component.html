@@ -1,0 +1,86 @@
+<div class="two-way-container">
+  <h3>Two-Way Binding Examples</h3>
+
+  <!-- Text Input -->
+  <label>Full Name:
+    <input type="text" [(ngModel)]="twoWayName" class="form-control" placeholder="Enter name" />
+  </label>
+  <p>Name preview: <strong>{{ twoWayName }}</strong></p>
+
+  <!-- Email -->
+  <label>Email:
+    <input type="email" [(ngModel)]="twoWayEmail" class="form-control" placeholder="Enter email" />
+  </label>
+  <p>Your Email: {{ twoWayEmail }}</p>
+
+  <!-- Range Slider -->
+  <label>Age: {{ twoWayAge }}
+    <input type="range" min="18" max="60" [(ngModel)]="twoWayAge" />
+  </label>
+
+  <!-- Radio Buttons -->
+  <fieldset>
+    <legend>Gender:</legend>
+    <div class="form-check">
+      <input type="radio" name="gender" [(ngModel)]="twoWayGender" value="male" /> Male
+    </div>
+    <div class="form-check">
+      <input type="radio" name="gender" [(ngModel)]="twoWayGender" value="female" /> Female
+    </div>
+    <div class="form-check">
+      <input type="radio" name="gender" [(ngModel)]="twoWayGender" value="other" /> Other
+    </div>
+  </fieldset>
+  <p>Selected gender: {{ twoWayGender }}</p>
+
+  <!-- Checkbox -->
+  <label>
+    <input type="checkbox" [(ngModel)]="twoWaySubscribed" /> Subscribe to newsletter
+  </label>
+  <p>Subscribed: {{ twoWaySubscribed }}</p>
+
+  <!-- Select Dropdown -->
+  <label>Favorite Language:
+    <select [(ngModel)]="twoWayLanguage" class="form-select">
+      <option *ngFor="let lang of programmingLanguages" [value]="lang">{{ lang }}</option>
+    </select>
+  </label>
+  <p>Selected Language: {{ twoWayLanguage }}</p>
+
+  <!-- Color Picker -->
+  <label>Favorite Color:
+    <input type="color" [(ngModel)]="twoWayColor" />
+  </label>
+  <div class="color-box" [style.background-color]="twoWayColor">Color: {{ twoWayColor }}</div>
+
+  <hr>
+  <button class="btn btn-primary" (click)="resetForm()">Reset All Fields</button>
+
+  <div class="profile-summary mt-3">
+    <strong>Live Profile:</strong>
+    <p>{{ profileSummary }}</p>
+  </div>
+
+  <hr>
+  <h4>User Table Example</h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of user">
+        <td>{{ u.id }}</td>
+        <td>{{ u.name }}</td>
+        <td>{{ u.department }}</td>
+        <td><button class="btn btn-info" (click)="onClick(u)">View</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="selectedId">Selected User: {{ selectedName }} ({{ selectedDepartment }})</p>
+</div>

@@ -1,0 +1,13 @@
+.container {
+  border: 2px solid darkgreen;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f0fff0;
+}
+
+.mouse-tracker {
+  border: 1px solid darkgreen;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #e0ffe0;
+}

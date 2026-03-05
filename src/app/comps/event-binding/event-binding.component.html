@@ -1,0 +1,36 @@
+<div class="container mt-3">
+  <h3>Event Binding Examples</h3>
+
+  <button type="button" class="btn btn-warning" [disabled]="isButtonDisabled" (click)="onButtonClick()">
+    {{ buttonLabel }}
+  </button>
+  <p>Clicked {{ clickCount }} time(s)</p>
+
+  <input type="text" class="form-control mt-2" placeholder="Press any key..." (keyup)="onKeyPress($event)" />
+  <p>Last key pressed: {{ lastKeyPressed }}</p>
+
+  <div class="mouse-tracker" (mousemove)="onMouseMove($event)">
+    Move mouse here! X: {{ mousePosition.x }} | Y: {{ mousePosition.y }}
+  </div>
+
+  <label>Pick a color:
+    <input type="color" [value]="selectedColor" (change)="onColorChange($event)" />
+  </label>
+  <p>Selected Color: <span [style.color]="selectedColor">{{ selectedColor }}</span></p>
+
+  <form (submit)="onFormSubmit($event)">
+    <input type="text" class="form-control mt-2" [(ngModel)]="inputValue" placeholder="Type here..." />
+    <button type="submit" class="btn btn-success mt-2">Submit</button>
+  </form>
+  <p>{{ formMessage }}</p>
+
+  <select [(ngModel)]="selectedFramework" (change)="onSelectionChange(selectedFramework)" class="form-select mt-2">
+    <option *ngFor="let fw of frameworks" [value]="fw.name">{{ fw.value }}</option>
+  </select>
+  <p>Selected Framework: {{ selectedFramework }}</p>
+
+  <div class="event-log mt-3">
+    <strong>Event Log (last 5 events):</strong>
+    <div *ngFor="let entry of eventLog">{{ entry }}</div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="container mt-3">
+  <h3>String Interpolation Examples</h3>
+
+  <p>Title: <strong>{{ title }}</strong></p>
+  <p>Student: {{ studentName }} | Course: {{ courseCode }}</p>
+  <p>Next year: {{ currentYear + 1 }}</p>
+  <p>{{ getWelcomeMessage() }}</p>
+  <p>Status: {{ isActive ? 'ACTIVE' : 'INACTIVE' }}</p>
+
+  <h4>User Info</h4>
+  <p>Name: {{ user.name }}</p>
+  <p>Position: {{ user.position }}</p>
+  <p>Department: {{ user.department }}</p>
+  <p>Role: {{ user.details?.role }}</p>
+
+  <h4>Skills</h4>
+  <ul>
+    <li *ngFor="let skill of skills">{{ skill }}</li>
+  </ul>
+
+  <h4>Countries (select example)</h4>
+  <select [(ngModel)]="selectedCountryId" class="form-select">
+    <option *ngFor="let c of countries" [ngValue]="c.id">{{ c.name }}</option>
+  </select>
+  <p>Selected ID: {{ selectedCountryId}}</p>
+
+  <h4>Debugging User object</h4>
+  <pre>{{ user | json }}</pre>
+</div>

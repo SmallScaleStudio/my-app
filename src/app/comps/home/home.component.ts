@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { UserInteractionComponent } from "../user-interaction/user-interaction.component";
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  imports: [UserInteractionComponent]
+  standalone: true,              // make sure this is standalone if using imports
+  imports: [CommonModule]        // add this
 })
 export class HomeComponent {
   courseCode: string = 'APPDEV1';
@@ -14,7 +16,6 @@ export class HomeComponent {
   units: number = 3;
   isActive: boolean = true;
   stat: string = 'Ongoing';
-
-  userImageUrl = '/karenina.gif';
+  courseImageUrl = '/karenina.gif';
   isHighlighted: boolean = true; 
 }

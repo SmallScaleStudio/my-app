@@ -1,0 +1,19 @@
+<div class="container mt-3">
+  <h3>Property Binding Examples</h3>
+
+  <button type="button" [disabled]="isButtonDisabled" (click)="onButtonClick()" class="btn btn-primary">
+    Click Me (disabled until first click)
+  </button>
+  <p>Clicked {{ clickCount }} time(s)</p>
+
+  <h4>Image Binding</h4>
+  <img [src]="imageSource" [alt]="imageAlt" [width]="imageWidth" />
+
+  <h4>Link Binding</h4>
+  <a [href]="linkUrl" target="_blank">{{ linkUrl }}</a>
+  <br/>
+  <a [href]="linkUrl" class="btn btn-link" target="_blank">Visit UB Site</a>
+
+  <h4>Input Placeholder Binding</h4>
+  <input type="text" [placeholder]="inputPlaceholder" class="form-control" />
+</div>

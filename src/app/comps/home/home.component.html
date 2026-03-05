@@ -2,7 +2,7 @@
   <div class="home-container">
     <h1 [class.highlighted]="isHighlighted">Welcome to {{ courseCode }}!</h1>
     <p class="welcome-msg">{{ welcomeMsg }}</p>
-    <img [src]="userImageUrl" alt="Course Image" class="avatar">
+    <img [src]="courseImageUrl" alt="Course Image" class="avatar">
 
     <p class="course-description">
       Dive into {{ courseCode }} and explore new knowledge with hands-on lessons and engaging activities. 
@@ -21,7 +21,5 @@
     <div *ngIf="isActive" class="active-badge">
       ✅ This course is currently active!
     </div>
-
-    <app-user-interaction></app-user-interaction>
   </div>
 </section>
